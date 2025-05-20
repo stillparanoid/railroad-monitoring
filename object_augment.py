@@ -5,7 +5,7 @@ import numpy as np
 def augment_object(image):
     if image is None:
         raise ValueError("Input image is None")
-
+ 
     # Разделяем изображение и альфа-канал
     original_alpha = None
     if image.shape[2] == 4:

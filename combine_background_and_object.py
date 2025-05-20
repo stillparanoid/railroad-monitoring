@@ -5,7 +5,7 @@ import logging
 import config
 import cv2
 import numpy as np
-
+  
 from object_augment import augment_object
 
 log = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ log = logging.getLogger(__name__)
 EXTRACTED_FRAMES_FOLDER = os.path.join(config.DATA_FOLDER, "extracted_frames")
 PREPARED_OBJECTS_FOLDER = os.path.join(config.DATA_FOLDER, "prepared_objects")
 OUTPUT_FOLDER = os.path.join(config.DATA_FOLDER, "synthetic_images")
-
+ 
 # Загружаем категории с масштабами и приводим названия к нижнему регистру с заменой пробелов на _
 CATEGORIES = pd.read_csv(os.path.join(config.DATA_FOLDER, "categories.csv"))
 CATEGORIES["Object name"] = CATEGORIES["Object name"].str.replace(" ", "_").str.lower()
